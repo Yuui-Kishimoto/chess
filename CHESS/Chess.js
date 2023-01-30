@@ -476,14 +476,13 @@ document.querySelectorAll('.box').forEach(item => {
         }
 
 
-        // Toggling the turn
-
+        // ターン切り替え
         if (tog % 2 !== 0) {
-            document.getElementById('tog').innerText = "White's Turn"
+            document.getElementById('whos-turn').innerText = "White's Turn"
             whosTurn('W')
         }
         if (tog % 2 == 0) {
-            document.getElementById('tog').innerText = "Black's Turn"
+            document.getElementById('whos-turn').innerText = "Black's Turn"
             whosTurn('B')
         }
 
