@@ -1,3 +1,4 @@
+
 // Inserting the Images
 function insertImage() {
 
@@ -6,9 +7,14 @@ function insertImage() {
         if (image.innerText.length !== 0) {
             if (image.innerText == 'Wpawn' || image.innerText == 'Bpawn') {
                 image.innerHTML = `${image.innerText} <img class='allimg allpawn' src="${image.innerText}.png" alt="">`
+                image.style.cursor = 'pointer'
+
             }
+
             else {
+
                 image.innerHTML = `${image.innerText} <img class='allimg' src="${image.innerText}.png" alt="">`
+                image.style.cursor = 'pointer'
             }
         }
     })
@@ -87,9 +93,19 @@ function reddish() {
 }
 
 
+
+
+
+
+
+
+
+
 tog = 1
 
-querySelectorAll('li.box').forEach(item => {
+document.querySelectorAll('.box').forEach(item => {
+
+
 
     item.addEventListener('click', function () {
 
@@ -512,7 +528,7 @@ querySelectorAll('li.box').forEach(item => {
 
 
 // Moving the element
-querySelectorAll('li.box').forEach(hathiTest => {
+document.querySelectorAll('.box').forEach(hathiTest => {
 
     hathiTest.addEventListener('click', function () {
 
@@ -521,7 +537,7 @@ querySelectorAll('li.box').forEach(hathiTest => {
             pinkId = hathiTest.id
             pinkText = hathiTest.innerText
 
-            querySelectorAll('li.box').forEach(hathiTest2 => {
+            document.querySelectorAll('.box').forEach(hathiTest2 => {
 
                 hathiTest2.addEventListener('click', function () {
                     if (hathiTest2.style.backgroundColor == 'green' && hathiTest2.innerText.length == 0) {
@@ -549,7 +565,7 @@ querySelectorAll('li.box').forEach(hathiTest => {
 
 // Prvents from selecting multiple elements
 z = 0
-querySelectorAll('li.box').forEach(ee => {
+document.querySelectorAll('.box').forEach(ee => {
     ee.addEventListener('click', function () {
         z = z + 1
         if (z % 2 == 0 && ee.style.backgroundColor !== 'green') {
