@@ -106,7 +106,7 @@ document.querySelectorAll('.box').forEach(item => {
 
 
 
-    item.addEventListener('click', function () {
+    item.addEventListener('touchend', function () {
 
         // To delete the opposite element
 
@@ -529,7 +529,7 @@ document.querySelectorAll('.box').forEach(item => {
 // Moving the element
 document.querySelectorAll('.box').forEach(hathiTest => {
 
-    hathiTest.addEventListener('click', function () {
+    hathiTest.addEventListener('touchend', function () {
 
         if (hathiTest.style.backgroundColor == 'pink') {
 
@@ -538,7 +538,7 @@ document.querySelectorAll('.box').forEach(hathiTest => {
 
             document.querySelectorAll('.box').forEach(hathiTest2 => {
 
-                hathiTest2.addEventListener('click', function () {
+                hathiTest2.addEventListener('touchend', function () {
                     if (hathiTest2.style.backgroundColor == 'green' && hathiTest2.innerText.length == 0) {
                         document.getElementById(pinkId).innerText = ''
                         hathiTest2.innerText = pinkText
@@ -564,7 +564,7 @@ document.querySelectorAll('.box').forEach(hathiTest => {
 // Prvents from selecting multiple elements
 z = 0
 document.querySelectorAll('.box').forEach(ee => {
-    ee.addEventListener('click', function () {
+    ee.addEventListener('touchend', function () {
         z = z + 1
         if (z % 2 == 0 && ee.style.backgroundColor !== 'green') {
             coloring()
